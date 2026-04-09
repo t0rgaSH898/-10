@@ -5,13 +5,14 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    int n;
-    int i;
-    cin >> n;
+    int N;
+    cin >> N;
 
-    for(i = 1; i <= n; i++)
-    { 
-        cout << i << " ";
+    for (int i = 1; i <= N; i++) {
+        if (i > 1) cout << " ";
+        cout << i;
     }
+    cout << endl;
+
     return 0;
 }
