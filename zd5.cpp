@@ -1,21 +1,20 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
-    int N;
-    long long factorial = 1; 
+    setlocale(LC_ALL, "Russian");
 
+    int N;
     cin >> N;
-    
-    if (N < 0) {
-        return 1;
-    }
-    
+
+    int count = 0;
     for (int i = 1; i <= N; i++) {
-        factorial *= i;
+        if (i % 2 == 0) {
+            count++;
+        }
     }
-    
-    cout << factorial << endl;
-    
+    cout << count << endl;
+
     return 0;
 }
