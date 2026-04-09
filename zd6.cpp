@@ -1,27 +1,18 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
-    int number;
-    int count = 0;
-    
-    cin >> number;
-    
-    if (number == 0) {
-        cout << 0 << endl;
-        return 0;
+    setlocale(LC_ALL, "Russian");
+
+    int N;
+    cin >> N;
+
+    long long factorial = 1;
+    for (int i = 1; i <= N; i++) {
+        factorial *= i;
     }
-    
-    if (number < 0) {
-        number = -number;
-    }
-    
-    while (number > 0) {
-        number = number / 10;  
-        count++;               
-    }
-    
-    cout << count << endl;
-    
+    cout << factorial << endl;
+
     return 0;
 }
